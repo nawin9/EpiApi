@@ -11,7 +11,7 @@ const configs = {
     port: 3000,
   },
   production: {
-    port: process.env.APP_PORT || 7071,
+    port: process.env.APP_PORT || 3001,
   },
   development: {},
   test: {

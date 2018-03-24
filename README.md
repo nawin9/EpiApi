@@ -1,14 +1,16 @@
 # EpiApi
 
-API server in Node + Koa + Mongodb
+API server in Node + Koa v2 + Mongodb
+
+Game server in SocketIO v2
 
 ## Getting started
 
 Clone the project
 
-`$git clone https://github.com/DuPayratBenoit/HorseJS-server`
+`$ git clone https://github.com/nawin9/EpiApi`
 
-`$cd HorseJS-server`
+`$ cd EpiApi`
 
 **NOTE:** Install and run a mongo server before starting the server.
 
@@ -41,6 +43,9 @@ Swagger:
 *   [x] Authentication with JWT
 *   [x] Swagger Doc
 *   [ ] Necessary routes
-*   [x] Socket IO v2
-*   [ ] Dockerization
+*   [x] Installing Socket IO v2
+*   [ ] Socket events
+*   [x] Dockerization
 *   [ ] Unit tests
+*   [ ] Deployment
+*   [ ] CI / CD

@@ -4,8 +4,7 @@ services:
 
   # Data API and authentication/authorization
   api:
-    image: node
-    container_name: api
+    image: api:latest
     build:
       context: ./
       args:
@@ -23,5 +22,4 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - mongo:/data
-    
+      - ./data:/data
