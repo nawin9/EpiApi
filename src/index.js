@@ -46,7 +46,7 @@ swaggerWrapper(app);
 
 // const connString = 'mongodb://epiapi_db_1:27017/api';
 // const connString = 'mongodb://localhost:27017/api';
-const connString = 'mongodb://nawin9:nvu-oyA-tce-Av2@ds135750.mlab.com:35750/api'; // config.mongoURI;
+const connString = config.mongoURI;
 mongoose.connect(connString);
 mongoose.connection.on('connected', () => {
     console.log(`Mongoose default connection open to ${connString}`);
