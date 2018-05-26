@@ -3,4 +3,3 @@ dist/
 data/
 .vscode
 yarn-error.log
-.env
