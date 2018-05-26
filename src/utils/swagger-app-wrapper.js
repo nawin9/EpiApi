@@ -4,6 +4,6 @@ import mount from 'koa-mount';
 import swaggerSpec from '../spec';
 
 export default function(app) {
-  app.use(swaggerUi.serve);
-  app.use(convert(mount('/swagger', swaggerUi.setup(swaggerSpec))));
+    app.use(swaggerUi.serve);
+    app.use(convert(mount('/swagger', swaggerUi.setup(swaggerSpec))));
 }

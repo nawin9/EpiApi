@@ -4,33 +4,33 @@ import pkginfo from '../../package.json';
 
 // Options for the swagger specification
 const options = {
-  // Import the swagger definitions
-  swaggerDefinition: {
-    info: {
-      title: pkginfo.name,
-      description: pkginfo.description,
-      version: pkginfo.version,
-      contact: pkginfo.author,
+    // Import the swagger definitions
+    swaggerDefinition: {
+        info: {
+            title: pkginfo.name,
+            description: pkginfo.description,
+            version: pkginfo.version,
+            contact: pkginfo.author,
+        },
+        consumes: ['application/x-www-form-urlencoded', 'application/json'],
+        produces: ['application/json'],
+        securityDefinitions: {
+            Authorization: {
+                in: 'header',
+                type: 'apiKey',
+                name: 'Authorization',
+                description: 'The credentials to authenticate a user',
+            },
+        },
     },
-    consumes: ['application/x-www-form-urlencoded', 'application/json'],
-    produces: ['application/json'],
-    securityDefinitions: {
-      Authorization: {
-        in: 'header',
-        type: 'apiKey',
-        name: 'Authorization',
-        description: 'The credentials to authenticate a user',
-      },
-    },
-  },
-  // Path to the API specs
-  apis: [
-    path.join(__dirname, '../controllers/*.js'),
-    path.join(__dirname, './definitions.yaml'),
-    path.join(__dirname, './parameters.yaml'),
-    path.join(__dirname, './responses.yaml'),
-    path.join(__dirname, './tags.yaml'),
-  ],
+    // Path to the API specs
+    apis: [
+        path.join(__dirname, '../controllers/*.js'),
+        path.join(__dirname, './definitions.yaml'),
+        path.join(__dirname, './parameters.yaml'),
+        path.join(__dirname, './responses.yaml'),
+        path.join(__dirname, './tags.yaml'),
+    ],
 };
 
 export default swaggerJSDoc(options);

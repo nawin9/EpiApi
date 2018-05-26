@@ -11,14 +11,14 @@ import uuidV4 from 'uuid/v4';
  * @return {function} Koa middleware.
  */
 function requestId(options = {}) {
-  const { header = 'X-Request-Id', propertyName = 'reqId', generator = uuidV4 } = options;
+    const { header = 'X-Request-Id', propertyName = 'reqId', generator = uuidV4 } = options;
 
-  return (ctx, next) => {
-    const reqId = ctx.request.get(header) || generator();
-    ctx[propertyName] = reqId;
-    ctx.set(header, reqId);
-    return next();
-  };
+    return (ctx, next) => {
+        const reqId = ctx.request.get(header) || generator();
+        ctx[propertyName] = reqId;
+        ctx.set(header, reqId);
+        return next();
+    };
 }
 
 export default requestId;

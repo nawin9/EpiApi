@@ -26,18 +26,18 @@ import User from '../models/user';
  *           $ref: '#/definitions/User'
  */
 const login = async ctx => {
-  const { username, password } = ctx.request.body;
+    const { username, password } = ctx.request.body;
 
-  const user = await User.findOne({ username });
-  if (user && user.validPassword(password)) {
-    ctx.body = {
-      id: user._id,
-      token: jwt.issue({ user: '' }),
-    };
-  } else {
-    ctx.status = 401;
-    ctx.body = { error: 'Invalid login' };
-  }
+    const user = await User.findOne({ username });
+    if (user && user.validPassword(password)) {
+        ctx.body = {
+            id: user._id,
+            token: jwt.issue({ user: '' }),
+        };
+    } else {
+        ctx.status = 401;
+        ctx.body = { error: 'Invalid login' };
+    }
 };
 
 /**
@@ -64,12 +64,12 @@ const login = async ctx => {
  *         description: Ok
  */
 const register = async ctx => {
-  const { username, password } = ctx.request.body;
-  const user = new User();
-  user.username = username;
-  user.password = user.generateHash(password);
-  await user.save();
-  ctx.body = { message: 'OK' };
+    const { username, password } = ctx.request.body;
+    const user = new User();
+    user.username = username;
+    user.password = user.generateHash(password);
+    await user.save();
+    ctx.body = { message: 'OK' };
 };
 
 export default { login, register };

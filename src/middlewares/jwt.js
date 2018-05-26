@@ -7,16 +7,16 @@ const instance = jwt({ secret });
 const jwtInstance = () => instance;
 
 const errorHandler = (ctx, next) =>
-  next().catch(err => {
-    if (err.status === 401) {
-      ctx.status = 401;
-      ctx.body = {
-        error: 'Not authorized',
-      };
-    } else {
-      throw err;
-    }
-  });
+    next().catch(err => {
+        if (err.status === 401) {
+            ctx.status = 401;
+            ctx.body = {
+                error: 'Not authorized',
+            };
+        } else {
+            throw err;
+        }
+    });
 
 const jwtErrorHandler = () => errorHandler;
 

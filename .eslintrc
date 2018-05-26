@@ -79,7 +79,8 @@
             {
                 "trailingComma": "es5",
                 "singleQuote": true,
-                "printWidth": 120
+                "printWidth": 120,
+                "tabWidth": 4
             }
         ],
         "jsx-a11y/href-no-hash": "off",

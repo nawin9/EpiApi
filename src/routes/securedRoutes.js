@@ -7,8 +7,8 @@ const router = new Router({ prefix: '/api' });
 router.use(jwt.jwtErrorHandler()).use(jwt.jwtInstance());
 
 router.get('/user', async ctx => {
-  const users = await User.find();
-  ctx.body = users;
+    const users = await User.find();
+    ctx.body = users;
 });
 
 export default router;
