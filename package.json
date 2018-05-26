@@ -4,8 +4,7 @@
     "description": "API Server using Nodejs",
     "main": "src",
     "scripts": {
-        "dev":
-            "NODE_ENV=development nodemon --quiet src --exec \"babel-node src --presets es2015,stage-2\"",
+        "dev": "NODE_ENV=development nodemon --quiet src --exec \"babel-node src --presets es2015,stage-2\"",
         "build": "babel src -s -D -d dist --presets es2015,stage-2",
         "heroku-postbuild": "npm run build",
         "start": "node dist",
@@ -15,7 +14,12 @@
         "type": "git",
         "url": "git+https://github.com/nawin9/EpiApi.git"
     },
-    "keywords": ["node", "mongodb", "api", "koa"],
+    "keywords": [
+        "node",
+        "mongodb",
+        "api",
+        "koa"
+    ],
     "author": {
         "name": "Nawin Kim",
         "email": "kim.nawin@gmail.com"
@@ -59,6 +63,7 @@
         "eslint-plugin-prettier": "^2.6.0",
         "eslint-plugin-react": "^7.7.0",
         "nodemon": "^1.17.2",
-        "prettier-eslint": "^8.8.1"
+        "prettier-eslint": "^8.8.1",
+        "regenerator-runtime": "^0.11.1"
     }
 }
