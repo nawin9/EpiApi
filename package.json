@@ -5,7 +5,7 @@
     "main": "src",
     "scripts": {
         "start":
-            "NODE_ENV=development nodemon --quiet src --exec \"babel-node src --presets es2015,stage-2\"",
+            "NODE_ENV=development node_modules/nodemon/bin/nodemon.js --quiet src --exec \"babel-node src --presets es2015,stage-2\"",
         "build": "babel src -s -D -d dist --presets es2015,stage-2",
         "heroku-postbuild": "npm run build",
         "dev": "node dist",
