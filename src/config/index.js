@@ -9,6 +9,7 @@ const configs = {
         name: process.env.APP_NAME || 'epiapi',
         host: process.env.APP_HOST || '0.0.0.0',
         port: 3000,
+        mongoURI: process.env.MONGODB_URI,
     },
     production: {
         port: process.env.APP_PORT || 3001,
